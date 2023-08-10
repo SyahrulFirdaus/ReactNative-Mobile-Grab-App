@@ -4,7 +4,7 @@ import React from 'react'
 import OvoComponent from '../../Component/OvoComponent'
 import MainFeature from '../../Component/MainFeature'
 import PromoItem from '../../Component/PromoItem'
-
+import { useNavigation } from '@react-navigation/native';
 
 
 const Home = () => {

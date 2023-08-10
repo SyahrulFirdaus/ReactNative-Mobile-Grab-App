@@ -1,11 +1,14 @@
 import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import MainFeatureSub from './MainFeatureSub'
+import { useNavigation } from '@react-navigation/native';
 
 const MainFeature = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.wrapperFiturUtama}>
-      <MainFeatureSub title="Food" image={require('../assets/Image/food.jpg')} />
+      <MainFeatureSub onPress={() => navigation.navigate('Food')} title="Food" image={require('../assets/Image/food.jpg')} />
       <MainFeatureSub title="Bike" image={require('../assets/Image/bike.jpg')} />
       <MainFeatureSub title="Car" image={require('../assets/Image/car.jpg')} />
       <MainFeatureSub title="Delivery" image={require('../assets/Image/send.jpg')} />
